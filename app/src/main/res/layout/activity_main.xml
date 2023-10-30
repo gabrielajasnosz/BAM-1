@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/enterNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter text:" />
+
+    <EditText
+        android:id="@+id/enterName"
+        style="@style/Input"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:editable="true"
+        android:inputType="text"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/Button"
+        android:layout_width="230dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Save" />
+</LinearLayout>
