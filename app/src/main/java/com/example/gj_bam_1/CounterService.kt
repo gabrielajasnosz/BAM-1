@@ -22,6 +22,7 @@ class CounterService : Service() {
         return null
     }
 
+    //Zadanie 2 - tworzenie nowego wątku dla każdego serwisu oraz logowanie co sekundę licznika
     private fun startCountdown(indexx: Int) {
         // zadanie 2 - utworzenie wątku oraz logowanie licznika co sekundę
         counters[indexx] = 0;
@@ -42,7 +43,10 @@ class CounterService : Service() {
     }
 
     override fun onDestroy() {
+        //Zadanie 2 - zatrzymanie serwisu
         isRunning = false
+
+        //Zadanie 3 - wysyłanie nazwy użytkownika oraz licznika ostatniego serwisu do receivera
         val receiver = Intent("RECEIVE_NUMBER_AND_USERNAME")
         receiver.putExtra("username", username)
         receiver.putExtra("number", counters[lastServiceIndex])

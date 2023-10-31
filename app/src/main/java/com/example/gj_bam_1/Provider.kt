@@ -8,6 +8,8 @@ import androidx.room.Room
 import com.example.gj_bam_1.database.UserDataDatabase
 
 class Provider : ContentProvider() {
+
+    //Zadanie 5 - utworzenie providera
     companion object {
         private var uriMatcher: UriMatcher? = null
         init {
@@ -25,6 +27,7 @@ class Provider : ContentProvider() {
         }
     }
 
+    // Zadanie 4 - metoda odczytujaca dane zapisane w bazie Room
     override fun query(
         uri: Uri, projection: Array<String>?, selection: String?,
         selectionArgs: Array<String>?, sortOrder: String?
